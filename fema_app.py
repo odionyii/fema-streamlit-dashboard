@@ -5,12 +5,8 @@ except ModuleNotFoundError:
     os.system("pip install streamlit")
     import streamlit as st
 
-try:
-    import plotly.express as px
-except ModuleNotFoundError:
-    import os
-    os.system("pip install plotly")
-    import plotly.express as px
+import pandas as pd
+import plotly.express as p
 
 
 # Title + Description
