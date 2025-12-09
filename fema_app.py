@@ -1,6 +1,16 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
+try:
+    import streamlit as st
+except ModuleNotFoundError:
+    import os
+    os.system("pip install streamlit")
+    import streamlit as st
+
+try:
+    import plotly.express as px
+except ModuleNotFoundError:
+    import os
+    os.system("pip install plotly")
+    import plotly.express as px
 
 
 # Title + Description
