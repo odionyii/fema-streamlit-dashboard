@@ -1,12 +1,22 @@
+import os
+import sys
+import subprocess
+
+# Make sure streamlit is installed
 try:
     import streamlit as st
 except ModuleNotFoundError:
-    import os
-    os.system("pip install streamlit")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit"])
     import streamlit as st
 
+# Make sure plotly is installed
+try:
+    import plotly.express as px
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
+    import plotly.express as px
+
 import pandas as pd
-import plotly.express as px
 
 
 # Title + Description
